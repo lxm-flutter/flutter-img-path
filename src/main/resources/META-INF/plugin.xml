@@ -1,0 +1,51 @@
+<idea-plugin>
+    <idea-version since-build="211.*"/>
+    <id>club.ximeng.idea.plugin.flutter-img-path</id>
+    <name>FlutterImgPath</name>
+    <vendor email="960132232@qq.com" url="https://github.com/lxm-flutter/flutter-img-path">liu</vendor>
+
+    <description><![CDATA[
+      <br>
+      <h1>How To Use</h1>
+      <b>step1.创建图片存放目录 如: ./assets/home/img</b><br>
+      <br>
+      <b>step2.修改pubspec.yaml</b><br>
+         <t><t>assets:<br>
+         <t><t># assets-generator-begin<br>
+         <t><t># assets/home/img/*<br>
+         <t><t># assets-generator-end<br>
+      <br>
+      <b>step3.Tools--FlutterImgPath</b><br>
+         <t><t>pubspec.yaml中的assets变量会被配置项目的图片，并在./lib目录下生产r.dart文件<br>
+      <br>
+      <b>step4.代码中导入r.dart文件，然后引用R类的变量</b><br>
+      <br>
+      <b>快捷键：Alt + I</b>
+      <br>
+    ]]></description>
+
+    <change-notes>
+        <![CDATA[
+      <br/>
+      <h2>1.0.0</h2>
+        - Initial release
+    ]]>
+    </change-notes>
+
+    <!-- please see https://plugins.jetbrains.com/docs/intellij/plugin-compatibility.html
+         on how to target different products -->
+    <depends>com.intellij.modules.platform</depends>
+
+    <extensions defaultExtensionNs="com.intellij">
+        <!-- Add your extensions here -->
+    </extensions>
+
+    <actions>
+        <!-- Add your actions here -->
+        <action id="club.ximeng.idea.plugin.FlutterImgPath" class="club.ximeng.idea.plugin.FlutterImgPath" text="Flutter Img Path"
+            icon="FlutterImgPathIcons.FlutterImgPath" description="A plugin for flutter images path creation">
+            <add-to-group group-id="ToolsMenu" anchor="first"/>
+            <keyboard-shortcut keymap="$default" first-keystroke="alt I" second-keystroke="alt I"/>
+        </action>
+    </actions>
+</idea-plugin>
